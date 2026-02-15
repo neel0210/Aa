@@ -5,6 +5,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't1-001',
     type: TaskType.TASK_1,
+    difficulty: 'Easy',
     title: 'Late for Work',
     prompt: 'You were late for work this morning and missed a meeting. Write an email to your manager.',
     bullets: [
@@ -16,6 +17,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't1-002',
     type: TaskType.TASK_1,
+    difficulty: 'Easy',
     title: 'Damaged Item Delivery',
     prompt: 'You bought a computer online, but it arrived damaged. Write an email to the customer service department.',
     bullets: [
@@ -27,6 +29,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't1-003',
     type: TaskType.TASK_1,
+    difficulty: 'Medium',
     title: 'Noise Complaint',
     prompt: 'Your neighbors play loud music late at night. Write an email to your landlord.',
     bullets: [
@@ -38,6 +41,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't1-004',
     type: TaskType.TASK_1,
+    difficulty: 'Easy',
     title: 'Volunteering Information',
     prompt: 'You saw an advertisement for volunteers at a local hospital. Write an email to the hospital coordinator.',
     bullets: [
@@ -49,6 +53,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't1-005',
     type: TaskType.TASK_1,
+    difficulty: 'Medium',
     title: 'Gym Membership Cancellation',
     prompt: 'You want to cancel your gym membership because you are moving. Write an email to the gym manager.',
     bullets: [
@@ -60,6 +65,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't1-006',
     type: TaskType.TASK_1,
+    difficulty: 'Easy',
     title: 'Inviting a Friend to Dinner',
     prompt: 'You are organizing a dinner party for your birthday. Write an email to a friend inviting them.',
     bullets: [
@@ -71,6 +77,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't1-007',
     type: TaskType.TASK_1,
+    difficulty: 'Medium',
     title: 'Lost Item at Hotel',
     prompt: 'You stayed at a hotel last weekend and left your watch in the room. Write an email to the hotel manager.',
     bullets: [
@@ -82,6 +89,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't1-008',
     type: TaskType.TASK_1,
+    difficulty: 'Hard',
     title: 'Requesting Time Off',
     prompt: 'You need to take a week off work to attend a family wedding. Write an email to your supervisor.',
     bullets: [
@@ -93,6 +101,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't1-009',
     type: TaskType.TASK_1,
+    difficulty: 'Medium',
     title: 'Feedback on Training',
     prompt: 'You recently attended a professional training session organized by your company. Write an email to the HR department.',
     bullets: [
@@ -104,6 +113,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't1-010',
     type: TaskType.TASK_1,
+    difficulty: 'Hard',
     title: 'Library Fine Dispute',
     prompt: 'You received a fine from the library for a book you already returned. Write an email to the librarian.',
     bullets: [
@@ -115,6 +125,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't1-011',
     type: TaskType.TASK_1,
+    difficulty: 'Medium',
     title: 'Restaurant Reservation Change',
     prompt: 'You made a reservation for a large group at a restaurant but need to change the time. Write an email to the restaurant manager.',
     bullets: [
@@ -126,6 +137,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't1-012',
     type: TaskType.TASK_1,
+    difficulty: 'Medium',
     title: 'Neighbor\'s Dog Barking',
     prompt: 'Your neighbor’s dog barks all day while they are at work. Write an email to your neighbor.',
     bullets: [
@@ -137,6 +149,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't1-013',
     type: TaskType.TASK_1,
+    difficulty: 'Hard',
     title: 'Job Application Follow-up',
     prompt: 'You had a job interview last week and haven\'t heard back. Write an email to the hiring manager.',
     bullets: [
@@ -148,6 +161,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't1-014',
     type: TaskType.TASK_1,
+    difficulty: 'Hard',
     title: 'Community Center Course',
     prompt: 'You want to suggest a new photography course at your local community center. Write an email to the director.',
     bullets: [
@@ -159,6 +173,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't1-015',
     type: TaskType.TASK_1,
+    difficulty: 'Easy',
     title: 'Apology to Friend',
     prompt: 'You forgot your friend\'s birthday yesterday. Write an email to your friend.',
     bullets: [
@@ -170,6 +185,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't1-016',
     type: TaskType.TASK_1,
+    difficulty: 'Medium',
     title: 'Broken Street Light',
     prompt: 'The street light outside your house has been broken for weeks. Write an email to the city council.',
     bullets: [
@@ -181,6 +197,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't1-017',
     type: TaskType.TASK_1,
+    difficulty: 'Hard',
     title: 'Incorrect Bill',
     prompt: 'You received an electricity bill that is much higher than usual. Write an email to the utility company.',
     bullets: [
@@ -192,6 +209,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't1-018',
     type: TaskType.TASK_1,
+    difficulty: 'Easy',
     title: 'Declining an Invitation',
     prompt: 'Your coworker invited you to a party, but you cannot go. Write an email to your coworker.',
     bullets: [
@@ -203,6 +221,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't1-019',
     type: TaskType.TASK_1,
+    difficulty: 'Medium',
     title: 'School Bus Issue',
     prompt: 'The school bus has been arriving late to pick up your child. Write an email to the school principal.',
     bullets: [
@@ -214,6 +233,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't1-020',
     type: TaskType.TASK_1,
+    difficulty: 'Hard',
     title: 'Reviewing a Colleague',
     prompt: 'Your boss asked you to write feedback about a colleague you worked with on a project. Write an email to your boss.',
     bullets: [
@@ -225,6 +245,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't1-021',
     type: TaskType.TASK_1,
+    difficulty: 'Easy',
     title: 'Selling Used Furniture',
     prompt: 'You are selling a sofa online and a potential buyer emailed you. Write a reply.',
     bullets: [
@@ -236,6 +257,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't1-022',
     type: TaskType.TASK_1,
+    difficulty: 'Easy',
     title: 'Hotel Booking Confirmation',
     prompt: 'You booked a hotel but haven’t received a confirmation email. Write to the hotel.',
     bullets: [
@@ -247,6 +269,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't1-023',
     type: TaskType.TASK_1,
+    difficulty: 'Medium',
     title: 'Advice to New Neighbor',
     prompt: 'A new neighbor moved in and asked for advice on local schools. Write an email to them.',
     bullets: [
@@ -258,6 +281,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't1-024',
     type: TaskType.TASK_1,
+    difficulty: 'Hard',
     title: 'Internet Service Down',
     prompt: 'Your internet has been down for 24 hours. Write to your ISP.',
     bullets: [
@@ -269,6 +293,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't1-025',
     type: TaskType.TASK_1,
+    difficulty: 'Hard',
     title: 'Resignation Letter',
     prompt: 'You have found a new job and are resigning. Write an email to your manager.',
     bullets: [
@@ -282,6 +307,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't2-001',
     type: TaskType.TASK_2,
+    difficulty: 'Easy',
     title: 'City Park Development',
     prompt: 'The city council is deciding how to use a vacant lot downtown. They are considering building a park or a shopping center.',
     options: {
@@ -292,6 +318,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't2-002',
     type: TaskType.TASK_2,
+    difficulty: 'Easy',
     title: 'Work from Home Policy',
     prompt: 'Your company is conducting a survey to decide on a future work policy. Choose the option you prefer and explain why.',
     options: {
@@ -302,6 +329,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't2-003',
     type: TaskType.TASK_2,
+    difficulty: 'Medium',
     title: 'School Funding',
     prompt: 'Your local school board has received extra funding. They are asking parents how to spend it.',
     options: {
@@ -312,6 +340,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't2-004',
     type: TaskType.TASK_2,
+    difficulty: 'Hard',
     title: 'Performance Bonus',
     prompt: 'Your company wants to change how it rewards employees. Which option do you prefer?',
     options: {
@@ -322,6 +351,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't2-005',
     type: TaskType.TASK_2,
+    difficulty: 'Medium',
     title: 'Traffic Control',
     prompt: 'The city is looking to reduce traffic congestion. They are proposing two solutions.',
     options: {
@@ -332,6 +362,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't2-006',
     type: TaskType.TASK_2,
+    difficulty: 'Easy',
     title: 'Office Dress Code',
     prompt: 'Your manager is asking for opinions on the office dress code.',
     options: {
@@ -342,6 +373,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't2-007',
     type: TaskType.TASK_2,
+    difficulty: 'Medium',
     title: 'Store Hours',
     prompt: 'A local grocery store is considering changing its operating hours. The owner wants customer feedback.',
     options: {
@@ -352,6 +384,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't2-008',
     type: TaskType.TASK_2,
+    difficulty: 'Hard',
     title: 'Employee Training',
     prompt: 'Your company has a budget for employee training. Which method is better?',
     options: {
@@ -362,6 +395,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't2-009',
     type: TaskType.TASK_2,
+    difficulty: 'Medium',
     title: 'Public Art vs Roads',
     prompt: 'The city has a surplus budget. They are asking residents where to spend it.',
     options: {
@@ -372,6 +406,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't2-010',
     type: TaskType.TASK_2,
+    difficulty: 'Easy',
     title: 'Team Building Event',
     prompt: 'Your department is planning a team-building event. What do you prefer?',
     options: {
@@ -382,6 +417,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't2-011',
     type: TaskType.TASK_2,
+    difficulty: 'Hard',
     title: 'Apartment Pet Policy',
     prompt: 'Your apartment building management is reviewing the pet policy. They are surveying residents.',
     options: {
@@ -392,6 +428,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't2-012',
     type: TaskType.TASK_2,
+    difficulty: 'Easy',
     title: 'Company Cafeteria',
     prompt: 'The company cafeteria wants to change the menu. What is your preference?',
     options: {
@@ -402,6 +439,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't2-013',
     type: TaskType.TASK_2,
+    difficulty: 'Medium',
     title: 'Children\'s TV Time',
     prompt: 'A research group is surveying parents about screen time limits for children.',
     options: {
@@ -412,6 +450,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't2-014',
     type: TaskType.TASK_2,
+    difficulty: 'Easy',
     title: 'Annual Company Party',
     prompt: 'Your company is planning the annual holiday party.',
     options: {
@@ -422,6 +461,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't2-015',
     type: TaskType.TASK_2,
+    difficulty: 'Hard',
     title: 'Recycling Program',
     prompt: 'Your town wants to improve recycling. Which policy do you support?',
     options: {
@@ -432,6 +472,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't2-016',
     type: TaskType.TASK_2,
+    difficulty: 'Medium',
     title: 'University Admissions',
     prompt: 'A university is changing its admission criteria.',
     options: {
@@ -442,6 +483,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't2-017',
     type: TaskType.TASK_2,
+    difficulty: 'Hard',
     title: 'Vacation Time',
     prompt: 'Your employer is offering a choice for vacation benefits.',
     options: {
@@ -452,6 +494,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't2-018',
     type: TaskType.TASK_2,
+    difficulty: 'Medium',
     title: 'Public Library Services',
     prompt: 'The library wants to modernize. What should they focus on?',
     options: {
@@ -462,6 +505,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't2-019',
     type: TaskType.TASK_2,
+    difficulty: 'Hard',
     title: 'Retirement Age',
     prompt: 'The government is discussing the mandatory retirement age.',
     options: {
@@ -472,6 +516,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't2-020',
     type: TaskType.TASK_2,
+    difficulty: 'Easy',
     title: 'Charity Donation',
     prompt: 'Your company will donate to one charity. Employees must vote.',
     options: {
@@ -482,6 +527,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't2-021',
     type: TaskType.TASK_2,
+    difficulty: 'Easy',
     title: 'Shopping Bags',
     prompt: 'The city wants to ban plastic bags. What do you think?',
     options: {
@@ -492,6 +538,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't2-022',
     type: TaskType.TASK_2,
+    difficulty: 'Medium',
     title: 'Work Schedule',
     prompt: 'Your team can change its weekly schedule.',
     options: {
@@ -502,6 +549,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't2-023',
     type: TaskType.TASK_2,
+    difficulty: 'Medium',
     title: 'Video Surveillance',
     prompt: 'The city plans to install cameras in public parks for safety.',
     options: {
@@ -512,6 +560,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't2-024',
     type: TaskType.TASK_2,
+    difficulty: 'Hard',
     title: 'Music in the Workplace',
     prompt: 'Your manager is asking if music should be played in the open office.',
     options: {
@@ -522,6 +571,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 't2-025',
     type: TaskType.TASK_2,
+    difficulty: 'Hard',
     title: 'Salary Transparency',
     prompt: 'Your company is considering making all salaries public within the company.',
     options: {

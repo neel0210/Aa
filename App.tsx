@@ -30,7 +30,7 @@ const Footer = () => (
   <footer className="bg-black border-t border-zinc-800 mt-auto">
     <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center">
       <p className="text-sm text-zinc-500 mb-2">
-        &copy; {new Date().getFullYear()} CelWrite. Designed for high-performance practice.
+        &copy; {new Date().getFullYear()} CelWrite.
       </p>
       <p className="text-xs text-zinc-600 font-medium tracking-wide">
         BY <span className="text-zinc-400">NEEL0210</span>, LEVERAGING AI.
@@ -46,7 +46,7 @@ const QuestionCard = ({ question, onSelect }: { question: Question; onSelect: (q
   >
     <div className="flex justify-between items-start mb-4">
       <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold ${question.type === TaskType.TASK_1 ? 'bg-blue-900/30 text-blue-400 border border-blue-800/50' : 'bg-purple-900/30 text-purple-400 border border-purple-800/50'}`}>
-        {question.type === TaskType.TASK_1 ? 'Task 1: Email' : 'Task 2: Survey'}
+        {question.type === TaskType.TASK_1 ? 'Task 1' : 'Task 2'}
       </span>
       <ChevronRight className="h-4 w-4 text-zinc-600 group-hover:text-blue-400 transition-colors" />
     </div>
@@ -59,47 +59,57 @@ const QuestionCard = ({ question, onSelect }: { question: Question; onSelect: (q
 
 const Dashboard = () => {
   const navigate = useNavigate();
-  const [filter, setFilter] = useState<'ALL' | 'TASK_1' | 'TASK_2'>('ALL');
+  const levels = ['Easy', 'Medium', 'Hard'] as const;
 
-  const filteredQuestions = QUESTIONS.filter(q => {
-    if (filter === 'ALL') return true;
-    return filter === 'TASK_1' ? q.type === TaskType.TASK_1 : q.type === TaskType.TASK_2;
-  });
+  const renderTaskSection = (title: string, taskType: TaskType) => {
+    return (
+      <div className="mb-16">
+        <div className="flex items-center gap-4 mb-8">
+          <h2 className="text-3xl font-black text-white tracking-tight">{title}</h2>
+          <div className="h-px flex-1 bg-zinc-800"></div>
+        </div>
+        
+        <div className="space-y-12">
+          {levels.map(level => {
+            const filtered = QUESTIONS.filter(q => q.type === taskType && q.difficulty === level);
+            if (filtered.length === 0) return null;
+
+            return (
+              <div key={level}>
+                <h3 className={`text-xs font-bold uppercase tracking-[0.2em] mb-6 flex items-center gap-2 ${
+                  level === 'Easy' ? 'text-emerald-500' : 
+                  level === 'Medium' ? 'text-amber-500' : 'text-rose-500'
+                }`}>
+                  <span className={`w-1.5 h-1.5 rounded-full ${
+                    level === 'Easy' ? 'bg-emerald-500' : 
+                    level === 'Medium' ? 'bg-amber-500' : 'bg-rose-500'
+                  }`} />
+                  {level} Level
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {filtered.map(q => (
+                    <QuestionCard key={q.id} question={q} onSelect={(q) => navigate(`/exam/${q.id}`)} />
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
+  };
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="text-center mb-16">
-        <div className="inline-flex items-center gap-2 bg-blue-600/10 border border-blue-500/20 px-4 py-1 rounded-full text-blue-400 text-xs font-bold mb-6">
-          <Sparkles className="w-3 h-3" />
-        </div>
-        <h1 className="text-6xl font-black text-white mb-4 tracking-tight">Master CELPIP Writing</h1>
+      <div className="text-center mb-20">
+        <h1 className="text-6xl font-black text-white mb-4 tracking-tight">Improve Celpip Writing</h1>
         <p className="text-xl text-zinc-400 max-w-2xl mx-auto font-light">
-          Experience the future of exam prep with <span className="text-white font-semibold">CelWrite</span>. 
-          Instant AI feedback and band scoring.
+          Structure your practice by task type and difficulty level.
         </p>
       </div>
 
-      <div className="flex justify-center mb-10 gap-3">
-        {(['ALL', 'TASK_1', 'TASK_2'] as const).map((f) => (
-          <button
-            key={f}
-            onClick={() => setFilter(f)}
-            className={`px-6 py-2 rounded-full text-sm font-bold transition-all ${
-              filter === f 
-                ? 'bg-blue-600 text-white shadow-[0_0_20px_rgba(37,99,235,0.3)]' 
-                : 'bg-zinc-900 text-zinc-400 hover:text-white border border-zinc-800'
-            }`}
-          >
-            {f === 'ALL' ? 'All Tasks' : f === 'TASK_1' ? 'Email Task' : 'Survey Task'}
-          </button>
-        ))}
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredQuestions.map(q => (
-          <QuestionCard key={q.id} question={q} onSelect={(q) => navigate(`/exam/${q.id}`)} />
-        ))}
-      </div>
+      {renderTaskSection("Task 1: Writing an Email", TaskType.TASK_1)}
+      {renderTaskSection("Task 2: Responding to Survey", TaskType.TASK_2)}
     </div>
   );
 };
@@ -109,6 +119,7 @@ const CustomTopic = () => {
   const [title, setTitle] = useState('');
   const [prompt, setPrompt] = useState('');
   const [type, setType] = useState<TaskType>(TaskType.TASK_1);
+  const [difficulty, setDifficulty] = useState<'Easy' | 'Medium' | 'Hard'>('Medium');
   const [bullets, setBullets] = useState(['', '', '']);
   const [optionA, setOptionA] = useState('');
   const [optionB, setOptionB] = useState('');
@@ -116,7 +127,7 @@ const CustomTopic = () => {
   const handleStart = () => {
     const customQ: Question = {
       id: 'custom-' + Date.now(),
-      title, prompt, type,
+      title, prompt, type, difficulty,
       bullets: type === TaskType.TASK_1 ? bullets : undefined,
       options: type === TaskType.TASK_2 ? { optionA, optionB } : undefined
     };
@@ -136,6 +147,22 @@ const CustomTopic = () => {
                 className={`flex-1 py-2.5 rounded-lg text-sm font-bold transition-all ${type === t ? 'bg-zinc-800 text-white shadow-sm' : 'text-zinc-500 hover:text-zinc-300'}`}
               >
                 {t === TaskType.TASK_1 ? 'Email' : 'Survey'}
+              </button>
+            ))}
+          </div>
+
+          <div className="flex gap-2">
+            {(['Easy', 'Medium', 'Hard'] as const).map((lvl) => (
+              <button
+                key={lvl}
+                onClick={() => setDifficulty(lvl)}
+                className={`flex-1 py-2 rounded-lg text-xs font-bold border transition-all ${
+                  difficulty === lvl 
+                  ? 'border-blue-500 bg-blue-500/10 text-blue-400' 
+                  : 'border-zinc-800 text-zinc-500 hover:border-zinc-700'
+                }`}
+              >
+                {lvl}
               </button>
             ))}
           </div>
